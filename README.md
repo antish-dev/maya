@@ -1,12 +1,30 @@
-# Maya v10 Gemini Connected
+# Maya
 
-Rebuilt Engage Lynk Maya with a Gemini server endpoint, embedded controlled knowledge retrieval, page citations, empathy/social modes, local fallback, human approval gates, rate limiting, and security headers.
+Maya is an HR governance and operations assistant for Engage Lynk.
 
-## Deploy
-1. Put the project in a private Git repository.
-2. Create a Render Blueprint or Docker web service.
-3. Add a newly generated private `GEMINI_API_KEY` in the service environment.
-4. Keep `GEMINI_MODEL=gemini-2.5-flash`.
-5. Deploy and open the service URL.
+## Features
 
-Revoke any key previously shared in chat. Never commit a real key to this project.
+- Secure Flask-based HR operations dashboard
+- Role-based access control for employees, managers, HR, partners, and auditors
+- Document, incident, and audit logging
+- Local SQLite database with seeded default documents
+- Session security and CSRF protections
+
+## Local development
+
+1. Create a virtual environment.
+2. Install dependencies:
+   `pip install -r requirements.txt`
+3. Set required environment variables:
+   `export MAYA_SECRET_KEY=change-me`
+   `export MAYA_ADMIN_EMAIL=admin@example.com`
+   `export MAYA_ADMIN_PASSWORD=change-me`
+4. Run the app:
+   `python app.py`
+
+The app listens on port 8080 by default.
+
+## Production deployment
+
+Deploy with Docker or Render using the provided configuration files.
+Keep `MAYA_SECRET_KEY` in a secret environment variable and never commit real credentials to the repository.
