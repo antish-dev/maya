@@ -1,0 +1,54 @@
+{
+  "product": "Maya v2.0",
+  "build": "2.0.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 34
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 932
+    },
+    {
+      "path": "docker-compose.yml",
+      "bytes": 294
+    },
+    {
+      "path": "app.py",
+      "bytes": 13876
+    },
+    {
+      "path": "README.md",
+      "bytes": 1226
+    },
+    {
+      "path": ".env.example",
+      "bytes": 152
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 31
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 324
+    },
+    {
+      "path": "static/sw.js",
+      "bytes": 127
+    },
+    {
+      "path": "static/manifest.json",
+      "bytes": 186
+    },
+    {
+      "path": "templates/index.html",
+      "bytes": 91268
+    },
+    {
+      "path": "tests/test_schema.py",
+      "bytes": 259
+    }
+  ]
+}

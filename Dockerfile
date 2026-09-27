@@ -1,0 +1,10 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+RUN mkdir -p /app/data && chown -R 10001:10001 /app
+USER 10001
+ENV PORT=8080 MAYA_HTTPS=true
+EXPOSE 8080
+CMD ["gunicorn","--bind","0.0.0.0:8080","--workers","2","--threads","4","--timeout","30","app:app"]

@@ -1,0 +1,12 @@
+services:
+  maya:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      MAYA_SECRET_KEY: ${MAYA_SECRET_KEY}
+      MAYA_ADMIN_EMAIL: ${MAYA_ADMIN_EMAIL}
+      MAYA_ADMIN_PASSWORD: ${MAYA_ADMIN_PASSWORD}
+      MAYA_HTTPS: "false"
+    volumes: ["maya_data:/app/data"]
+volumes:
+  maya_data:
