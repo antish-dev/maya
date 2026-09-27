@@ -4,7 +4,11 @@ services:
     runtime: docker
     healthCheckPath: /health
     envVars:
-      - key: GEMINI_API_KEY
+      - key: MAYA_SECRET_KEY
         sync: false
-      - key: GEMINI_MODEL
-        value: gemini-2.5-flash
+      - key: MAYA_ADMIN_EMAIL
+        sync: false
+      - key: MAYA_ADMIN_PASSWORD
+        sync: false
+      - key: MAYA_HTTPS
+        value: "true"
